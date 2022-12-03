@@ -1,0 +1,46 @@
+      
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
+<div class="container">  
+    <button routerLink="/about" class="btn mr-lg-2 custom-btn">les publications</button>
+  <button routerLink="/publications" class="btn custom-btn custom-btn-bg custom-btn-link">nouvelle publication</button>  
+  <button routerLink="/Demos" class="btn mr-lg-2 custom-btn">les Demos</button>   
+  <button routerLink="/addDemo" class="btn custom-btn custom-btn-bg custom-btn-link">nouvelle Démonstration</button>
+  <div class="row">
+
+            
+        <div *ngFor="let pub of publications" class="col-md-6 col-xl-3">
+   
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-orange">
+                             <h1 class="card-heading">  <label class="pure-material-textfield-outlined clickable" (click)= "onConsult(pub.id)">
+         {{pub?.societe}}
+        </label></h1>
+    </div>
+    <div class="card-body">
+    <p class="card-p">
+     <label class="pure-material-textfield-outlined">
+         Contact RH: {{pub?.contact}}
+        </label>
+           
+        <label class="pure-material-textfield-outlined">
+        societe: {{pub?.societe}}</label>
+                
+            <label class="pure-material-textfield-outlined"> Id :{{pub?.id}}</label>
+                                    
+        </p>
+   </div>
+
+    <button  class="btn custom-btn custom-btn-bg custom-btn-link" (click)= "onEdit(pub.id)">Edit</button><br>
+   
+    <button  class="btn custom-btn custom-btn-bg custom-btn-link" (click)= "deletePub(pub)">delete</button>
+ 
+
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+<div class="container spacer">
+
+  <button routerLink="/about" class="btn mr-lg-2 custom-btn">les publications</button>
+  <button routerLink="/publications" class="btn custom-btn custom-btn-bg custom-btn-link">nouvelle publication</button>
+  <button routerLink="/Demos" class="btn mr-lg-2 custom-btn">les Demos</button> 
+  <button routerLink="/addDemo" class="btn custom-btn custom-btn-bg custom-btn-link">nouvelle Démonstration</button> 
+  <div class="container">
+      <div >
+          <div class="registration"> 👋 Welcome!</div>
+
+          <div class="panel-body">
+           
+                  <label class="pure-material-textfield-outlined">Nom</label>
+                  <input class="form-control" type="text" [(ngModel)]="publication.nom"/>
+        
+ 
+                  <label class="pure-material-textfield-outlined">contact</label>
+                  <input class="form-control" type="text" [(ngModel)]="publication.contact"/>
+  
+                  <label class="pure-material-textfield-outlined">societe</label>
+                  <input class="form-control" type="text" [(ngModel)]="publication.societe"/>
+        
+              <button class="btn btn-primary" (click)="savePublication()">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    </div>
